@@ -17,7 +17,7 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 
 //create a database connection -> u can also
 //create a separate file for this and then import/use that file here
-app.get('/', (req, res) => res.send("API Working"));
+
 mongoose
   .connect("mongodb+srv://lionmukundan:mukundan16@cluster0.ztkuv.mongodb.net/")
   .then(() => console.log("MongoDB connected"))
@@ -25,7 +25,7 @@ mongoose
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+app.get('/', (req, res) => res.send("API Working"));
 app.use(
   cors({
     origin: "http://localhost:5173",
